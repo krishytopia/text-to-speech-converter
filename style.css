@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Perandory&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: #5cdb95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1{
+    font-family: 'Perandory', sans-serif;
+    color: #edf5e1;
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+textarea{
+    font-family: 'DM Sans', sans-serif;
+    width: 600px;
+    height: 250px;
+    background:#76e3a7;
+    color: #edf5e1;
+    font-size: 15px;
+    border: 4;
+    outline: 0;
+    padding: 20px;
+    resize: none;
+    margin-bottom: 30px;
+    border-radius:10px;
+    border-color: #edf5e1;
+}
+.row{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    background: #05386b;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Perandory', sans-serif;
+}
+
+button img{
+    width: 16px;
+    margin-right: 10px;
+}
+
+select{
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    background: #05386b;
+    height: 50px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+    appearance: none;
+    background-image: url(images/dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 20px;
+}
