@@ -1,52 +1,45 @@
 let speech = new SpeechSynthesisUtterance();
-
-
 let voices = [];
+let voiceSelect = document.getElementById("voiceSelect");
 
-let voiceSelect = document.querySelector("select")
-
+// Populate available voices
 window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
     speech.voice = voices[0];
 
-    voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)))
+    voices.forEach((voice, i) => {
+        let option = new Option(voice.name, i);
+        voiceSelect.add(option);
+    });
 };
 
-voiceSelect.addEventListener("change", () =>{
-    speech.voice = voices[voiceSelect.value]
+// Change voice on selection
+voiceSelect.addEventListener("change", () => {
+    speech.voice = voices[voiceSelect.value];
 });
 
-document.querySelector("button").addEventListener("click", () =>{
-    speech.text = document.querySelector("textarea").value;
-    window.speechSynthesis.speak(speech)
+// Speak the text
+document.getElementById("speakButton").addEventListener("click", () => {
+    speech.text = document.getElementById("textInput").value;
+    window.speechSynthesis.speak(speech);
 });
 
+// Download Speech (Using Google TTS API)
+document.getElementById("downloadButton").addEventListener("click", () => {
+    let text = document.getElementById("textInput").value;
 
-  // Function to handle button click event
-  document.getElementById('downloadButton').addEventListener('click', function() {
-    // Your code to trigger the download action
-    const chunks = [];
+    if (!text) {
+        alert("Please enter some text to download!");
+        return;
+    }
 
-    // Mock speech output for demonstration
-    const speechOutput = new SpeechSynthesisUtterance("This is a test speech output.");
+    let url = `https://api.voicerss.org/?key=YOUR_API_KEY&hl=en-us&src=${encodeURIComponent(text)}`;
 
-    // Start recording speech output
-    const mediaRecorder = new MediaRecorder(speechOutput);
-    mediaRecorder.ondataavailable = e => chunks.push(e.data);
-    mediaRecorder.onstop = () => {
-        const blob = new Blob(chunks, { type: 'audio/mp3' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'speech.mp3';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-    };
-
-    mediaRecorder.start();
-    // When speech synthesis is complete, stop recording
-    speechOutput.onend = function() {
-        mediaRecorder.stop();
-    };
-  });
+    // Create a hidden download link
+    let a = document.createElement("a");
+    a.href = url;
+    a.download = "speech.mp3";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
