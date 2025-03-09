@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <title>Text-to-Speech Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<div class="hero">
-    <h1>Text-To-Speech Converter</h1>
-    <textarea placeholder="Write anything here..."></textarea>
-    <div class="row">
-        <select></select>
-        <button><img src="play.png">Listen</button>
-        <button id="downloadButton">Download</button>
-    </div>
-</div>    
-<script src="app.js"></script>
 
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.history.back()">
+        <img src="icons/back.png" alt="Back"> Back
+    </button>
+
+    <div class="hero">
+        <h1>Text-To-Speech</h1>
+        <textarea id="textInput" placeholder="Type something..."></textarea>
+        
+        <div class="row">
+            <select id="voiceSelect"></select>
+            <button id="speakButton"><img src="icons/play.png"> Listen</button>
+            <button id="downloadButton">Download</button>
+        </div>
+    </div>
+
+    <!-- Support Button -->
+    <a href="https://www.patreon.com/" target="_blank" class="support-btn">
+        <img src="icons/support.png" alt="Support Me"> Support Me
+    </a>
+
+    <script src="app.js"></script>
 </body>
 </html>
