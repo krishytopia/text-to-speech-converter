@@ -31,7 +31,7 @@ h1 {
 textarea {
     width: 600px;
     height: 200px;
-    background: #16213e;
+    background: #B5C9C3;
     color: white;
     border: 2px solid #00d4ff;
     padding: 15px;
@@ -50,7 +50,7 @@ textarea {
 }
 
 button {
-    background: #0f3460;
+    background: #cfd8d7;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-    background: #00d4ff;
+    background: #B5C9C3;
     color: black;
 }
 
@@ -74,7 +74,7 @@ button img {
 
 /* Dropdown Styling */
 select {
-    background: #0f3460;
+    background: #cfd8d7;
     color: white;
     border: none;
     padding: 12px;
