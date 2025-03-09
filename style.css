@@ -1,87 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Perandory&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.hero{
-    width: 100%;
-    min-height: 100vh;
-    background: #5cdb95;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
-.hero h1{
-    font-family: 'Perandory', sans-serif;
-    color: #edf5e1;
-    font-size: 100px;
-    font-weight: 500;
-    margin-top: -50px;
-    margin-bottom: 50px;
+body {
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
 }
-textarea{
-    font-family: 'DM Sans', sans-serif;
-    width: 600px;
-    height: 250px;
-    background:#76e3a7;
-    color: #edf5e1;
-    font-size: 15px;
-    border: 4;
-    outline: 0;
-    padding: 20px;
-    resize: none;
-    margin-bottom: 30px;
-    border-radius:10px;
-    border-color: #edf5e1;
-}
-.row{
-    width: 600px;
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 }
-button{
-    background: #05386b;
-    color: #fff;
+
+h1 {
+    font-size: 40px;
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+    background: #16213e;
+    color: white;
+    border: 2px solid #00d4ff;
+    padding: 15px;
+    border-radius: 10px;
     font-size: 16px;
-    padding: 10px 30px;
-    border-radius: 35px;
-    border: 0;
-    outline: 0;
+    outline: none;
+    resize: none;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: #0f3460;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-family: 'Perandory', sans-serif;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-button img{
+button:hover {
+    background: #00d4ff;
+    color: black;
+}
+
+button img {
     width: 16px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
-select{
-    flex: 1;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: #fff;
-    background: #05386b;
-    height: 50px;
-    padding: 0 20px;
-    outline: 0;
-    border: 0;
-    border-radius: 35px;
-    appearance: none;
-    background-image: url(dropdown.png);
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position-x: calc(100% - 20px);
-    background-position-y: 20px;
+/* Dropdown Styling */
+select {
+    background: #0f3460;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4b5c;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.back-btn img {
+    width: 16px;
+    margin-right: 5px;
+}
+
+/* Support Me Button */
+.support-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #27ae60;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.support-btn:hover {
+    background: #2ecc71;
+}
+
+.support-btn img {
+    width: 16px;
+    margin-right: 5px;
 }
