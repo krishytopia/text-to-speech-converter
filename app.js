@@ -33,7 +33,7 @@ document.getElementById("downloadButton").addEventListener("click", () => {
         return;
     }
 
-    let url = `https://api.voicerss.org/?key=YOUR_API_KEY&hl=en-us&src=${encodeURIComponent(text)}`;
+    let url = `https://api.voicerss.org/?key=74362d7673704300af7a3633cbfab016&hl=en-us&src=${encodeURIComponent(text)}`;
 
     // Create a hidden download link
     let a = document.createElement("a");
