@@ -120,3 +120,47 @@ select {
     width: 16px;
     margin-right: 5px;
 }
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4b5c;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.back-btn img {
+    width: 12px; /* Smaller icon */
+    margin-right: 5px;
+}
+
+/* Support Me Button */
+.support-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #27ae60;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.support-btn:hover {
+    background: #2ecc71;
+}
+
+.support-btn img {
+    width: 12px; /* Smaller icon */
+    margin-right: 5px;
+}
+
